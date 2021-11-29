@@ -142,11 +142,6 @@
 
                 <td class="tdc"><c:out value="${lang == 'ru' ? product.notesRu : product.notesEn}"/></td>
                 <td class="tdc">
-                    <c:if test="${!(user.userRole == 'ADMIN' || user.userRole == 'CASHIER' || user.userRole == 'SENIOR_CASHIER')}">
-                        <button class="smallbutton" type="submit" name="productCode" value="${product.code}">
-                            <fmt:message key="main.addToCart" bundle="${buttons}"/>
-                        </button>
-                    </c:if>
                     <form name="addProductForm" method="post" action="project" >
                         <input type="hidden" name="command" value="addProductToCart" />
                         <input type="text" name="productQuantity" size="6" required/>
