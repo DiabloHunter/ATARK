@@ -1,0 +1,225 @@
+body {
+    background-color: white;
+}
+h1 {
+    text-align: center;
+    color: rgb(65,40,0);
+}
+h3 {
+    padding-left: 5%;
+    color: black;
+}
+.widetable, .narrowtable {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    border-radius: 10px;
+    border-spacing: 0;
+    box-shadow: 0 0 15px rgba(50,50,50,0.5);
+}
+.narrowtable {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.widetable {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+th {
+    text-align: center;
+    background: white;
+    color: black;
+    text-shadow: 0 1px 1px #2D2020;
+    padding: 10px 20px;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: black;
+}
+td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: black;
+    padding: 10px 20px;
+    background: white;
+}
+.main_div {
+    padding: 10px 20px;
+    background: black;
+}
+.input {
+    height: 25px;
+    border-radius: 3px;
+}
+.index_div {
+    text-align: center;
+    margin: 10%;
+    border-width: 2px;
+    border-color: #7554ff;
+    border-radius: 10px;
+}
+.main_div {
+    margin-left: 5%;
+    margin-right: 5%;
+    box-shadow: 0 0 12px rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+.inner_div {
+    border: solid;
+    padding: 10px;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 5px;
+    background:white;
+}
+.button_div {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.tdc {
+    text-align: center;
+}
+.tdl {
+    text-align: left;
+}
+tr:hover {
+    text-shadow: 0 1px 1px #2D2020;
+}
+
+.widemenu, .narrowmenu {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+.widemenu {
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    height: 30px;
+}
+.narrowmenu {
+    width: 60%;
+    margin-right: 20%;
+    margin-left: 20%;
+    height: 60px;
+}
+.menuitem {
+    float: right;
+    width: 170px
+}
+.menubutton:hover {
+    border: 2px solid orangered;
+    color: orangered;
+}
+.smallbutton:hover {
+    color: orangered;
+}
+.bigbutton:hover {
+    color: orangered;
+}
+.giantbutton:hover {
+    color: orangered;
+}
+.menubutton {
+    height: 20px;
+    width: 150px;
+    margin: 5px 10px;
+    border: 1px solid rgba(65,40,0,0.6);
+    background-color: transparent;
+    border-radius: 3px;
+    font-size: 12px;
+    font-style: italic;
+}
+.smallbutton {
+    height: 28px;
+    width: 140px;
+    margin: 5px;
+    border-radius: 4px;
+}
+.bigbutton {
+    height: 36px;
+    width: 240px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.giantbutton {
+    height: 50px;
+    width: 480px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-shadow: 0 1px 1px #2D2020;
+    text-align: center;
+}
+.hidden {
+    display: none;
+}
+.pagination {
+    display: inline-block;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+.langmenu {
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    text-align: right;
+    height: 30px;
+}
+.langmenu_item {
+    float: right;
+    width: 48px
+}
+.lang_button {
+    height: 20px;
+    width: 36px;
+    margin: 5px 5px;
+    border: none;
+    background-color: transparent;
+    border-radius: 3px;
+    font-size: 12px;
+    font-style: italic;
+}
+.lang_button:hover {
+    height: 20px;
+    width: 36px;
+    margin: 5px 5px;
+    border: none;
+    background-color: rgba(255,70,0,0.2);
+    border-radius: 3px;
+    font-size: 12px;
+    font-style: italic;
+}
+.lang_button_active {
+    height: 20px;
+    width: 36px;
+    margin: 5px 5px;
+    border: none;
+    background-color: rgba(255,70,0,0.5);
+    border-radius: 3px;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.pagination a.active {
+    background-color: rgba(255,70,0,0.5);
+    color: white;
+}
+.pagination a:hover:not(.active) {
+    background-color: rgba(255,70,0,0.2);
+}
+footer {
+    text-align: center;
+    font-style: italic;
+    font-weight :bold;
+}
