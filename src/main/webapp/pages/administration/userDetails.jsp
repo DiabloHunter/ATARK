@@ -83,12 +83,42 @@
             <input type="text" value="<c:out value="${user.name}"/>" name="name" size="36" class="input" required/><br/>
 
             <h4><fmt:message key="userProfile.role" bundle="${legend}"/></h4>
-            <select value="<c:out value="${user.userRole}"/>" name="userRole" style="height: 25px; width: 275px;" required>
-                <option>USER</option>
-                <option>CASHIER</option>
-                <option>SENIOR_CASHIER</option>
-                <option>MERCHANT</option>
-                <option>ADMIN</option>
+            <select value="<c:out value="${user.userRole}"/>" name="userRole" style="height: 25px; width: 290px;" required>
+                <c:if test="${user.userRole == 'USER'}">
+                    <option selected>USER</option>
+                    <option>CASHIER</option>
+                    <option>SENIOR_CASHIER</option>
+                    <option>MERCHANT</option>
+                    <option>ADMIN</option>
+                </c:if>
+                <c:if test="${user.userRole == 'CASHIER'}">
+                    <option>USER</option>
+                    <option selected>CASHIER</option>
+                    <option>SENIOR_CASHIER</option>
+                    <option>MERCHANT</option>
+                    <option>ADMIN</option>
+                </c:if>
+                <c:if test="${user.userRole == 'SENIOR_CASHIER'}">
+                    <option>USER</option>
+                    <option>CASHIER</option>
+                    <option selected>SENIOR_CASHIER</option>
+                    <option>MERCHANT</option>
+                    <option>ADMIN</option>
+                </c:if>
+                <c:if test="${user.userRole == 'MERCHANT'}">
+                    <option>USER</option>
+                    <option>CASHIER</option>
+                    <option>SENIOR_CASHIER</option>
+                    <option selected>MERCHANT</option>
+                    <option>ADMIN</option>
+                </c:if>
+                <c:if test="${user.userRole == 'ADMIN'}">
+                    <option>USER</option>
+                    <option>CASHIER</option>
+                    <option>SENIOR_CASHIER</option>
+                    <option>MERCHANT</option>
+                    <option selected>ADMIN</option>
+                </c:if>
             </select><br/>
 
             <%--<h4><fmt:message key="userProfile.role" bundle="${legend}"/></h4>

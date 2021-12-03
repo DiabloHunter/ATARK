@@ -51,6 +51,8 @@ public class CommandResolver {
         commands.put("saveUserProfileAsAdmin", new CommandSaveUserProfileAsAdmin());
         commands.put("deleteUserAccount", new CommandDeleteUser());
         commands.put("viewUserProfile", new CommandShowUserDetails()); //useless
+        commands.put("openAddNewUserAsAdmin", new CommandOpenAddNewUserAsAdmin());
+        commands.put("addNewUserAsAdmin", new CommandAddNewUserAsAdmin());
 
     }
 

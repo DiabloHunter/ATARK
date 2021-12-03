@@ -10,7 +10,6 @@ import com.my.atark.service.IProductServ;
 import org.apache.log4j.Logger;
 
 import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
@@ -60,7 +59,7 @@ public class ProductService implements IProductServ {
     @Button
     @Override
     public List<Product> findAllProducts() throws ProductServiceException {
-        List<Product> products = new LinkedList<>();
+        List<Product> products;
         try {
             daoFactory.open();
             productDao = daoFactory.getProductDao();
@@ -76,7 +75,7 @@ public class ProductService implements IProductServ {
     @Override
     public Set<String> createProductSet() throws ProductServiceException {
         Set<String> productSet = new HashSet<>();
-        List<Product> products = new LinkedList<>();
+        List<Product> products;
         try {
             daoFactory.open();
             productDao = daoFactory.getProductDao();
@@ -93,7 +92,7 @@ public class ProductService implements IProductServ {
     @Button
     @Override
     public List<Product> findProducts(Integer from, Integer offset) throws ProductServiceException {
-        List<Product> products = new LinkedList<>();
+        List<Product> products;
         try {
             daoFactory.open();
             productDao = daoFactory.getProductDao();
@@ -108,7 +107,7 @@ public class ProductService implements IProductServ {
 
     @Override
     public Product findProductByCode(String code) throws ProductServiceException {
-        Product product = new Product();
+        Product product;
         try {
             daoFactory.open();
             productDao = daoFactory.getProductDao();
@@ -151,23 +150,6 @@ public class ProductService implements IProductServ {
             return false;
         }
         return result;
-    }
-
-    public synchronized boolean updateProducts(List<Product> products) {
-        try {
-            daoFactory.beginTransaction();
-            productDao = daoFactory.getProductDao();
-            for (Product product : products)
-                if (!productDao.updateProductInDB(product)) {
-                    daoFactory.rollbackTransaction();
-                    return false;
-                }
-            daoFactory.commitTransaction();
-            return true;
-        } catch (DataBaseConnectionException ex) {
-            log.error(ex);
-            return false;
-        }
     }
 
     @Override

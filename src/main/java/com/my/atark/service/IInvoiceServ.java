@@ -8,11 +8,6 @@ import com.my.atark.exceptions.InvoiceServiceException;
 import java.util.List;
 
 public interface IInvoiceServ {
-    /**
-     * Calculates total number of invoice records in DB
-     * @return total number of invoices
-     */
-    Integer calculateInvoicesNumber();
 
     /**
      * Finds all invoices in DB

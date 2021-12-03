@@ -102,6 +102,14 @@
         </c:forEach>
     </table>
 </div>
+<div class="button_div">
+    <form action="project" method="post">
+        <input type="hidden" name="command" value="openAddNewUserAsAdmin" />
+        <button type="submit" class="bigbutton">
+            <fmt:message key="manageUsers.addNew" bundle="${buttons}"/>
+        </button>
+    </form>
+</div>
 <t:colontitle/>
 </body>
 </html>

@@ -113,28 +113,6 @@ public class MySQLDaoFactory extends DaoFactory {
         connection = getConnection();
     }
 
-    @Deprecated
-    public static void closeConnection(Connection connection) throws DataBaseConnectionException {
-        try {
-            connection.close();
-        } catch (SQLException sqle) {
-            log.error(sqle);
-        } catch (NullPointerException npe) {
-            log.error(npe);
-        }
-    }
-
-    @Override
-    void closeConnection() throws DataBaseConnectionException {
-        try {
-            connection.close();
-        } catch (SQLException sqle) {
-            log.error(sqle);
-        } catch (NullPointerException npe) {
-            log.error(npe);
-        }
-    }
-
     @Override
     public IUserDao getUserDao() {
         return new UserDaoImpl(connection);

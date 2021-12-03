@@ -79,5 +79,11 @@ public interface IUserDao {
      */
     boolean deleteUserFromDB(User user);
 
+    /**
+     * Deletes user from DB
+     * @param id - User id to delete from DB
+     * @return true if operation success and false if fails
+     */
+
     boolean deleteUserFromDBById(Integer id);
 }

@@ -16,7 +16,7 @@ import org.apache.log4j.Logger;
 
 import java.util.List;
 
-public class PaymentService implements IPaymentServ {
+public class PaymentService implements IPaymentServ{
 
     private static final DataBaseSelector source = DataBaseSelector.MY_SQL;
     private static final Logger log = Logger.getLogger(UserService.class);

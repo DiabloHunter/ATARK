@@ -30,7 +30,7 @@ public class CommandRemoveFromInvoice implements ICommand {
                 result.setPage(conf.getPage("securityError"));
                 return result;
             }
-
+        
             Long invCode = Long.parseLong( content.getRequestParameter("invCode")[0]);
             String productCode =  content.getRequestParameter("productCode")[0];
             IInvoiceServ serv = ServiceFactory.getInvoiceService();

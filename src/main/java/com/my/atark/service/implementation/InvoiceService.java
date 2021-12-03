@@ -1,11 +1,10 @@
 package com.my.atark.service.implementation;
 
-
-import com.my.atark.service.Button;
-import com.my.atark.service.IInvoiceServ;
 import com.my.atark.dao.*;
 import com.my.atark.domain.*;
 import com.my.atark.exceptions.*;
+import com.my.atark.service.Button;
+import com.my.atark.service.IInvoiceServ;
 import org.apache.log4j.Logger;
 
 import java.util.LinkedList;
@@ -40,20 +39,6 @@ public class InvoiceService implements IInvoiceServ {
     }
 
     /** CRUD methods */
-
-    @Override
-    public Integer calculateInvoicesNumber() {
-        Integer result = 0;
-        try {
-            daoFactory.beginTransaction();
-            invoiceDao = daoFactory.getInvoiceDao();
-            result = invoiceDao.calculateInvoiceNumber();
-            daoFactory.commitTransaction();
-        } catch (DataBaseConnectionException | DataNotFoundException ex) {
-            log.error(ex);
-        }
-        return result;
-    }
 
     @Button
     @Override

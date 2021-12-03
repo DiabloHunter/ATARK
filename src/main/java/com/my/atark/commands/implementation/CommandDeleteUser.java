@@ -1,6 +1,5 @@
 package com.my.atark.commands.implementation;
 
-
 import com.my.atark.commands.ICommand;
 import com.my.atark.commands.Security;
 import com.my.atark.config.Configuration;

@@ -195,28 +195,31 @@ tr:hover {
     width: 36px;
     margin: 5px 5px;
     border: none;
-    background-color: rgba(255,70,0,0.2);
+    background-color: black;
     border-radius: 3px;
     font-size: 12px;
     font-style: italic;
+    color:white;
 }
 .lang_button_active {
     height: 20px;
     width: 36px;
     margin: 5px 5px;
     border: none;
-    background-color: rgba(255,70,0,0.5);
+    background-color:black;
     border-radius: 3px;
     font-size: 12px;
     font-style: italic;
+    color:white;
 }
 
 .pagination a.active {
-    background-color: rgba(255,70,0,0.5);
+    background-color: black;
     color: white;
 }
 .pagination a:hover:not(.active) {
-    background-color: rgba(255,70,0,0.2);
+    background-color: black;
+    color:white;
 }
 footer {
     text-align: center;

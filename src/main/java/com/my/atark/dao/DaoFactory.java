@@ -41,12 +41,6 @@ public abstract class DaoFactory {
     public abstract ITransactionDao getTransactionDao();
 
     /**
-     * Closes connection to Data Source
-     * @throws DataBaseConnectionException if unable to close connection
-     */
-    abstract void closeConnection() throws DataBaseConnectionException;
-
-    /**
      * Opens connection to Data Source
      * @throws DataBaseConnectionException if unable to open connection
      */
@@ -82,15 +76,6 @@ public abstract class DaoFactory {
         switch (dataBase) {
             case MY_SQL:
                 return new MySQLDaoFactory();
-            case MS_SQL:
-                log.error("Database " + dataBase + " not supported yet");
-                throw new DataBaseNotSupportedException(dataBase);
-            case ORACLE:
-                log.error("Database " + dataBase + " not supported yet");
-                throw new DataBaseNotSupportedException(dataBase);
-            case POSTGRESS:
-                log.error("Database " + dataBase + " not supported yet");
-                throw new DataBaseNotSupportedException(dataBase);
             default:
                 log.error("Database type not set");
                 throw new DataBaseNotSupportedException("Database type not set");

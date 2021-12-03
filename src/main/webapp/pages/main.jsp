@@ -146,9 +146,16 @@
                         <input type="hidden" name="command" value="addProductToCart" />
                         <input type="text" name="productQuantity" size="6" required/>
                         <input type="hidden" name="productQuantityFromDB" value="${(product.quantity)}" />
-                        <button class="smallbutton" type="submit" name="productCode" value="${product.code}">
-                            <fmt:message key="main.addToCart" bundle="${buttons}"/>
-                        </button>
+                        <c:if test="${user.name == 'Guest' || user.userRole == 'USER'}">
+                            <button class="smallbutton" type="submit" name="productCode" value="${product.code}" disabled>
+                                <fmt:message key="main.addToCart" bundle="${buttons}"/>
+                            </button>
+                        </c:if>
+                        <c:if test="${user.name != 'Guest' && user.userRole != 'USER'}">
+                            <button class="smallbutton" type="submit" name="productCode" value="${product.code}">
+                                <fmt:message key="main.addToCart" bundle="${buttons}"/>
+                            </button>
+                        </c:if>
                     </form>
                     <form name="getProductDetailsForm" method="post" action="project" >
                         <input type="hidden" name="command" value="getProductDetails" />
@@ -170,6 +177,7 @@
                 </c:if>
             </c:forEach>
         </div>
+
     </div>
     <t:colontitle />
 </body>
