@@ -14,6 +14,7 @@ import com.my.atark.service.IProductServ;
 import com.my.atark.service.ServiceFactory;
 import org.apache.log4j.Logger;
 
+
 public class CommandUpdateProduct implements ICommand {
 
     private static final Logger log = Logger.getLogger(CommandUpdateProduct.class);

@@ -5,6 +5,7 @@
 <c:set value="${sessionScope.get(\"cart\")}" var="userCart" scope="page" />
 <c:set value="${sessionScope.get(\"user\")}" var="user" scope="page" />
 <c:set value="${pageScope.get(\"pageNum\")}" var="pageNum" scope="page" />
+<c:set value="${sessionScope.get(\"cash\")}" var="cash" scope="page" />
 <c:set value="${sessionScope.get(\"locale\").language}" var="lang" scope="page" />
 <fmt:setLocale value="${sessionScope.get(\"locale\")}" />
 <fmt:setBundle basename = "legend" var = "legend"/>
@@ -177,8 +178,9 @@
                 </c:if>
             </c:forEach>
         </div>
-
     </div>
     <t:colontitle />
+
+
 </body>
 </html>

@@ -9,7 +9,7 @@ import com.my.atark.controller.SessionRequestContent;
 import com.my.atark.domain.Product;
 import org.apache.log4j.Logger;
 
-public class CommandShowProductDetails implements ICommand{
+public class CommandShowProductDetails implements ICommand {
 
     private static final Logger log = Logger.getLogger(CommandUpdateProduct.class);
 

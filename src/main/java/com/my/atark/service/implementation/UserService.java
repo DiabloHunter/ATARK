@@ -5,6 +5,7 @@ import com.my.atark.dao.DataBaseSelector;
 import com.my.atark.dao.IUserDao;
 import com.my.atark.domain.User;
 import com.my.atark.domain.UserRole;
+
 import com.my.atark.exceptions.*;
 import com.my.atark.service.Button;
 import com.my.atark.service.IUserServ;
@@ -30,7 +31,7 @@ public class UserService implements IUserServ {
 
     @Button
     @Override
-    public User findUser(String name, String password) throws UnknownUserException{
+    public User findUser(String name, String password) throws UnknownUserException {
         User user;
         try {
             daoFactory.open();

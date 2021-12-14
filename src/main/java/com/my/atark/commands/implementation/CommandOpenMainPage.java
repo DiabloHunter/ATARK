@@ -13,7 +13,7 @@ import org.apache.log4j.Logger;
 
 import java.util.List;
 
-public class CommandOpenMainPage implements ICommand{
+public class CommandOpenMainPage implements ICommand {
 
     private static final Logger log = Logger.getLogger(CommandOpenMainPage.class);
 
